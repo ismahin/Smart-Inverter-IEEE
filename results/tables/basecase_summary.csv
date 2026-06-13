@@ -1,0 +1,2 @@
+NumBuses,NumBranches,TotalLoad_kW,TotalLoad_kVAr,MinVoltage_pu,MaxVoltage_pu,Ploss_kW,Qloss_kVAr,Iterations,Converged
+33,32,3715,2300,0.903771996833557,1,210.998336023729,143.032955969602,10,1

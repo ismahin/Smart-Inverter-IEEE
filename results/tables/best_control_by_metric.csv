@@ -1,0 +1,9 @@
+Scenario,Metric,BestControlStrategy,BestValue
+proposal_80pct_partial_cloud,Lowest mean voltage deviation,hybrid_pso,0.013671750980321
+proposal_80pct_partial_cloud,Lowest maximum voltage deviation,hybrid_pso,0.0349402364144481
+proposal_80pct_partial_cloud,Fewest voltage violations,voltvar,0
+proposal_80pct_partial_cloud,Lowest mean active loss,voltvar,64.1122761629431
+stress_100pct_clear_low_daytime,Lowest mean voltage deviation,hybrid_pso,0.0122317814077285
+stress_100pct_clear_low_daytime,Lowest maximum voltage deviation,hybrid,0.0458820346691338
+stress_100pct_clear_low_daytime,Fewest voltage violations,voltvar,0
+stress_100pct_clear_low_daytime,Lowest mean active loss,voltwatt,64.0917476337714

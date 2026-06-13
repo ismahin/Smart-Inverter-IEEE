@@ -1,0 +1,740 @@
+
+--- PAGE 1 ---
+Optimized Smart Inverter Control for Voltage Regulation in 
+High PV Penetration Distribution Networks  
+Research Methods -RESM -1950  
+ 
+Submitted By:  
+Reaj Uddin Hemal  
+Student Number: A00046863  
+Course Code: TU207  
+Master’s Program name: Sustainable Electrical Energy System  
+Potential research supervisor(s):  
+Malabika Basu  & Samuel Ngotho  
+Institute where the work will be based:  Technological University Dublin  
+ 
+ 
+ 
+ 
+ 
+ 
+DEPARTMENT OF ELECTRICAL AND ELECTRONIC ENGINEERING  
+FACULTY OF ENGINEERING  
+Technological University Dublin  
+ 
+11 December 2025 
+
+
+--- PAGE 2 ---
+1 
+ TABLE OF CONTENTS  
+Table of contents  1 
+Abstract  2 
+Research Question  3-4 
+2.1 Problem Statement  3 
+2.2 Current Solutions  3 
+2.3 Problems with Current Solutions  3 
+2.4 Research Strategy  3 
+2.5 Research Questions  4 
+Impact of Research  5 
+The Current State of the Art  6-8 
+4.1 Literature Review  6 
+4.2 Smart Inverters  6 
+4.3 The inverter is controlled by these controls to respond to 
+measurements of real time grid voltages  6 
+4.4 Evidence from Literature  7 
+4.5 These are the greatest issues  7-8 
+4.6 Recent trends in Smart Inverter Technology Recent studies have 
+concentrated on some of the emerging trends that will help increase the 
+functionality of smart inverters  8 
+Methodology  9-13 
+5.1 Work Package 1: Voltage Regulation Analysis  9 
+5.2 Work Package 2: Control Strategy Evaluation  10 
+5.3 Work Package 3: Recommendations for Optimization  10-12 
+Resources  13 
+6.1 Estimated Timeline  13 
+Ethical and Safety Implications and Open Access Considerations  14 
+References  15-17 
+  
+Table 2: Estimated Timeline  
+ 13 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+ 
+
+--- PAGE 3 ---
+2 
+ Abstract  
+The increasing penetration of solar photovoltaic (PV) systems in modern distribution networks 
+presents significant challenges in maintaining voltage stability due to the intermittent and 
+decentralized nature of renewable generation. Conventional voltage re gulation techniques are often 
+insufficient to manage these dynamic conditions, particularly in networks with high levels of PV 
+integration.  
+This research investigates the effectiveness of optimized and coordinated smart inverter control 
+strategies, specifically Volt -VAR and Volt -Watt control, in improving voltage regulation and enhancing 
+hosting capacity in distribution networks. A simulation -based approach using MATLAB/Simulink is 
+employed to model a modified IEEE 33 -bus distribution system under varying solar penetration levels 
+and dynamic operating conditions.  
+The study evaluates the performance of individual and hybrid control strategies using key metrics such 
+as voltage deviation, power losses, and voltage stability response time. Furthermore, Particle Swarm 
+Optimization (PSO) is applied to determine optimal c ontrol parameters for improving system 
+performance.  
+The expected outcomes of this research include improved voltage stability, reduced voltage violations, 
+and increased hosting capacity, contributing to the reliable integration of renewable energy into 
+modern power systems. The findings aim to provide practi cal insights for utilities and grid operators in 
+optimizing smart inverter deployment in high PV penetration environments.  
+Word count: 1 95 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 4 ---
+3 
+ 2. Research Question  
+The switch to renewable energy is crucial on the way to the sustainable future of energy, but it also 
+entails grid stability problems, particularly in regions where the proportion of solar energy is high. The 
+research should focus on how smart inverters ca n be applied to enhance the values of the voltage 
+regulation in the solar dominated grid to make it stable and reliable.  
+2.1 Problem Statement:  
+The more renewable energy is absorbed into the grids, such as solar, the more their intermittency 
+leads to variations in the voltages. Such variations are hard to manage using the conventional grid 
+systems that were created to have a constant and predictab le source of power generation such as fossil 
+fuels. Moreover, the increased number of decentralized energy generation units such as residential 
+solar panels is contributing to the fact that voltage imbalances are increasingly becoming common and 
+posing a p ossible threat to grid stability and power quality  [4] [5]. 
+2.2 Current Solutions:  
+In modern use, grid operators are still using old techniques of controlling voltage, such as using voltage 
+control equipment (e.g., tap -changing transformers) and reactive power compensation. The solutions 
+mentioned are, however, not always adequate with h igh renewable penetration systems where the 
+variation in voltages is common and more difficult to control. In addition, such conventional systems 
+tend to be rigid, which cannot dynamically adapt to the variability in the output of solar power due to 
+weathe r conditions and time of the day  [6] [7]. 
+2.3 Problems with Current Solutions:  
+The outdated methods of voltage regulation cannot address the fast -emerging complex demands of 
+solar dominated grids. Such systems cannot easily respond to the changing voltage in real -time to such 
+rapid changes in voltage when producing renewable energy w hich varies in production.  The standard 
+equipment that is currently being used is also losing its relevance with the growth of grid infiltration 
+of solar and other renewable sources. So, there is an urgent need  to find the solutions that might offer 
+dynami c voltage regulation and active control in those new grid conditions  [8]. 
+2.4 Research Strategy:  
+Smart inverters have also been suggested to solve these issues because they will be able to offer 
+dynamic control of both voltage and reactive power. Smart inverters can respond to instantaneous 
+changes in the grid caused by the production of solar energy to stabilize the voltage levels and 
+eliminate the necessity of conventional reactive power equipment. The study will be aimed at 
+researching the optimization of smart inverters to be optimized in voltage regulation of solar -
+dominated grids, the performance  of the inverters under different grid conditions, and their possible 
+contribution to grid stability.  
+ 
+ 
+ 
+
+--- PAGE 5 ---
+4 
+ 2.5 Research Question s: 
+How can optimized and coordinated Volt -VAR and Volt -Watt control strategies in smart inverters 
+minimize voltage deviation and maximize hosting capacity in distribution networks with high solar PV 
+penetration under varying operating conditions?  
+Sub-Research Questions:  
+1. How does voltage deviation vary with increasing solar PV penetration in the absence of smart 
+inverter control?  
+2. How effective are Volt -VAR and Volt -Watt control strategies individually in regulating voltage 
+under different grid conditions?  
+3. To what extent does a coordinated (hybrid) control strategy improve voltage stability 
+compared to individual control methods?  
+4. What are the optimal control parameter settings for smart inverters to minimize voltage 
+violations and enhance overall grid performance?  
+2.6 Research Gap  
+Although significant research has been conducted on smart inverter -based voltage regulation in 
+distribution networks with high solar PV penetration, several critical gaps remain.  Existing studies 
+primarily focus on the individual application of control strategies such as Volt -VAR or Volt -Watt for 
+mitigating voltage violations. While these methods have demonstrated effectiveness under specific 
+operating conditions, their performance  is often limited when applied independently in highly dynamic 
+and variable grid environments  [9] [10]. In particular, the interaction between active and reactive 
+power control is not fully optimized in many existing approaches.  
+Furthermore, a large portion of the literature evaluates smart inverter performance under static or 
+simplified grid conditions. However, real -world distribution networks experience continuously 
+changing solar generation, load demand, and network conditions . There is limited research that 
+systematically analyzes inverter performance under varying solar penetration levels and dynamic 
+operating scenarios [11]. Another key limitation is the lack of optimization -focused studies that 
+determine the optimal parameter settings for inverter control strategies. Many studies adopt 
+predefined control curves without exploring how parameter tuning can enhance voltage stabil ity, 
+reduce power losses, and increase hosting capacity [12]. Additionally, insufficient attention has been 
+given to coordinated or hybrid control strategies that combine Volt -VAR and Volt -Watt functionalities. 
+The potential benefits of such coordinated approaches in improving overall grid performance remain 
+underexp lored, particularly in the context of high PV penetration [10]. 
+Therefore, this research aims to address these gaps by developing and evaluating an optimized and 
+coordinated smart inverter control framework. The study will focus on analyzing inverter performance 
+under varying operating conditions, optimizing control pa rameters, and comparing individual and 
+hybrid control strategies to improve voltage regulation and maximize hosting capacity in modern 
+distribution networks.  
+Word Count: 823 
+
+--- PAGE 6 ---
+5 
+ 3. Impact of Research  
+This study could introduce significant social and economic value by enhancing the reliability and 
+efficiency of the integration of renewable energy into the power grids. The stability of the grids is 
+important in providing continuous supply of electricity and this is a very fundamental requirement to 
+the operation of industries, homes and infrastructure. Especially the ability  to control the voltage in 
+grids with high solar penetration is vital in the countries that are investing significantly in solar energy 
+as they switch to sustainable energy systems. The optimalization of smart inverters through the 
+research will ensure that solar -heavy grids can operate successfully without the need to experience 
+voltage imbalance as well as power interruptio n due to the variability in production of solar energy  
+[11]  [12]. 
+Also, the study supports UN SDG 7, especially Target 7.2, which aims to spread the proportion of 
+renewable energy in the world energy. This study can be useful by determining the best methods of 
+deploying smart inverters to minimize grid instabilities to f acilitate extensive use of solar energy both 
+in developed and developing nations. Besides, by offering practical solutions regarding the 
+enhancement of grid stability, this study would also lower the cost of energy consumption by limiting 
+the necessity to bolster the grid and employing reactive power gear. The International Renewable 
+Energy Agency (IRENA) is of the opinion that a total of 50 percent decrease in the cost of energy could 
+be realized by 2050 through the incorporation of high proportions of ren ewable energy, which would 
+not only aid in economic development but also in environmental sustainability  [13]  [14]. 
+In the context of Ireland, the integration of solar PV into distribution networks is rapidly increasing as 
+part of national decarbonization  targets and renewable energy policies. ESB Networks  has identified 
+voltage regulation and hosting capacity as key challenges in accommodating higher levels of 
+distributed generation within the existing grid infrastructure. Therefore, the development of optimized 
+smart inverter control strategies is particu larly relevant for the Irish power system. This research can 
+support grid operators in Ireland by providing practical solutions to enhance voltage stability, reduce 
+the need for costly network reinforceme nts, and enable greater integration of renewable energy 
+sources in line with national sustainability goals [12]. 
+Word Count: 368 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 7 ---
+6 
+ 4. The Current State of the Art  
+literature review :  
+4.1 Introduction to Voltage Regulation Challenges in High PV Grids  
+The increasing penetration of solar photovoltaic (PV) systems in modern power distribution networks 
+has significantly transformed the traditional structure and operation of electrical grids. While this 
+transition is essential for achieving global sustainab ility goals and reducing carbon emissions, it 
+introduces complex technical challenges, particularly in maintaining voltage stability within acceptable 
+limits.  Unlike conventional power systems, which rely on centralized and controllable generation 
+sources, solar PV generation is inherently intermittent and decentralized. The variability of solar 
+irradiance, influenced by weather conditions and time of day, resul ts in fluctuating power output. 
+Therefore , distribution networks experience frequent voltage rise and voltage drop conditions, 
+especially in systems with high PV penetration [15].  
+Voltage rise is particularly problematic in low -voltage and medium -voltage distribution networks 
+where excess generation from distributed PV systems can lead to overvoltage conditions. These 
+conditions can damage electrical equipment, reduce system reliabi lity, and violate grid code 
+requirements. Conversely, sudden drops in solar generation due to cloud cover can result in 
+undervoltage conditions, further complicating grid operation.  Traditional voltage regulation methods, 
+such as on -load tap changers (OLTCs), capacitor banks, and voltage regulators, were designed for 
+unidirectional power flow and predictable load conditions. However, in modern distribution networks 
+with high levels of  distributed generation, power flows become bidirectional and highly dynamic. As a 
+result, conventional voltage control mechanisms are no longer sufficient to maintain voltage stability 
+under rapidly changing conditions [14].  
+4.2 Role of Smart Inverters in Modern Power Systems  
+To address the limitations of traditional voltage regulation techniques, smart inverters have emerged 
+as a key enabling technology in modern power systems. Unlike conventional inverters, which simply 
+convert direct current (DC) from PV panels into alternati ng current (AC), smart inverters are equipped 
+with advanced control capabilities that allow them to actively participate in grid regulation.  
+Smart inverters can dynamically adjust both active and reactive power output in response to real -time 
+grid conditions. This capability enables them to provide voltage support, improve power quality, and 
+enhance overall grid stability. As a result, smart in verters are increasingly being recognized as a critical 
+component in facilitating the integration of renewable energy into distribution networks [17].  
+One of the key advantages of smart inverters is their ability to provide localized control. By responding 
+to voltage measurements at the point of connection, smart inverters can quickly mitigate voltage 
+fluctuations without requiring centralized control sy stems. This decentralized approach improves 
+system responsiveness and reduces the need for costly grid infrastructure upgrades.  
+Furthermore, smart inverters can be programmed to follow predefined control strategies, enabling 
+flexible and adaptive operation. These capabilities make them particularly suitable for managing the 
+challenges associated with high PV penetration.  
+ 
+
+--- PAGE 8 ---
+7 
+ 4.3 Volt -VAR Control Strategy  
+Volt-VAR control is one of the most widely studied and implemented strategies for voltage regulation 
+using smart inverters. This approach involves adjusting the reactive power output of the inverter based 
+on local voltage measurements.  When the voltage at a bus fall  below the nominal level, the inverter 
+injects reactive power to support the voltage. Conversely, when the voltage exceeds the acceptable 
+range, the inverter absorbs reactive power to reduce voltage levels. This dynamic adjustment helps 
+maintain voltage wi thin predefined limits and improves overall system stability [17].  Several studies 
+have demonstrated the effectiveness of Volt -VAR control in mitigating voltage fluctuations in 
+distribution networks. For example, research has shown that properly designed Volt -VAR control 
+curves can significantly reduce voltage deviations and improve power quality in systems with moderate 
+PV penetration [25].  
+However, despite its advantages, Volt -VAR control has certain limitations. Its effectiveness depends on 
+accurate parameter tuning and appropriate control curve design. In addition, in systems with very high 
+PV penetration, reactive power support alone may not be sufficient to prevent overvoltage conditions. 
+This limitation highlights the need for complementary control strategies.  
+4.4 Volt -Watt Control Strategy  
+Volt-Watt control is another important strategy used in smart inverter -based voltage regulation. Unlike 
+Volt-VAR control, which focuses on reactive power, Volt -Watt control regulates the active power output 
+of the inverter.  During periods of high solar generation, excessive active power injection can lead to 
+overvoltage conditions. Volt -Watt control addresses this issue by curtailing the active power output 
+when voltage exceeds predefined thresholds. This helps prevent voltag e rise and ensures compliance 
+with grid standards [24].  Research has shown that Volt -Watt control is particularly effective in networks 
+with high PV penetration, where reactive power alone is insufficient to maintain voltage stability. By 
+directly limiting active power injection, this strategy provides a more i mmediate response to 
+overvoltage conditions.  
+However, Volt -Watt control also has significant drawbacks. The curtailment of active power results in 
+a loss of generated energy, which can reduce the economic benefits of solar PV systems. This trade -off 
+between voltage regulation and energy efficiency is  a key limitation of the Volt -Watt approach.  
+4.5 Comparative Analysis of Volt -VAR and Volt -Watt Control  
+Several  studies have compared the performance of Volt -VAR and Volt -Watt control strategies in 
+different operating conditions. These studies highlight that both methods have distinct advantages and 
+limitations.  Volt-VAR control is generally more effective in managing voltage under moderate PV 
+penetration levels, as it provides continuous voltage support without reducing active power output. 
+However, its effectiveness decreases in high PV penetration scenarios, wh ere reactive power alone 
+cannot fully mitigate voltage rise.  In contrast, Volt -Watt control is more effective in preventing 
+overvoltage in high generation scenarios, but it comes at the cost of reduced energy output. This 
+makes it less desirable from an economic perspective.  
+Recent research suggests that combining these two strategies can provide improved performance. 
+Hybrid or coordinated control approaches allow simultaneous adjustment of active and reactive 
+power, enabling more effective voltage regulation across a wider ra nge of operating conditions [18].  
+
+--- PAGE 9 ---
+8 
+ Despite these promising results, the optimal coordination of Volt -VAR and Volt -Watt control strategies 
+remains an area of ongoing research. In particular, the interaction between active and reactive power 
+control is not fully understood, and further investi gation is required to develop effective coordination 
+mechanisms.  
+4.6 Limitations of Existing Research  
+Although significant progress has been made in the development of smart inverter control strategies, 
+several important limitations remain in existing  literature.  
+Firstly, many studies evaluate inverter performance under static or simplified conditions. These studies 
+often assume constant load and generation profiles, which do not accurately reflect real -world 
+operating conditions. In practice, both load demand and solar generation vary continuously, requiring 
+dynamic and adaptive control strategies [24].  Secondly, a large portion of the literature focuses on 
+predefined control settings without considering optimization. Control parameters such as voltage 
+thresholds and reactive power limits are often selected based on standard guidelines rather than being 
+optimized for specific network conditions. This limits the effectiveness of smart inverter control 
+strategies [25].  
+Another limitation is the lack of focus on coordinated control strategies. While some studies have 
+explored hybrid approaches, there is limited research on systematically optimizing the interaction 
+between Volt -VAR and Volt -Watt control under varying opera ting conditions [18].  Additionally, the 
+impact of smart inverter control on hosting capacity is not thoroughly investigated. Hosting capacity 
+refers to the maximum amount of distributed generation that can be integrated into the network 
+without violating operational constraints . Understanding this aspect is critical for enabling higher levels 
+of renewable energy integration.  
+4.7 Emerging Trends and Advanced Techniques  
+Recent research has focused on enhancing smart inverter performance through advanced control 
+techniques and emerging technologies.  Model Predictive Control (MPC) is one such approach that 
+enables inverters to anticipate future system conditions and adjust their output accordingly. This 
+predictive capability allows for more proactive voltage regulation and improved system stability [20 ]. 
+Machine learning techniques are also being explored for optimizing inverter control strategies. By 
+analyzing  historical data, machine learning algorithms can adapt control parameters in real -time, 
+improving performance under uncertain and dynamic conditions [21].  In addition, coordinated control 
+of smart inverters with other distributed energy resources, such as battery energy storage systems and 
+demand response mechanisms, is gaining increasing attention. This integrated approach can further 
+enhance grid stability  and improve overall system efficiency [19].  
+4.8 Summary and Research Direction  
+In summary, smart inverters have emerged as a critical technology for enabling the integration of high 
+levels of solar PV into distribution networks. Control strategies such as Volt -VAR and Volt -Watt have 
+demonstrated effectiveness in mitigating voltage fl uctuations, but their individual limitations highlight 
+the need for more advanced and coordinated approaches.  
+
+--- PAGE 10 ---
+9 
+ Existing research lacks comprehensive analysis of optimized and hybrid control strategies under 
+dynamic operating conditions. Furthermore, there is limited focus on parameter optimization and its 
+impact on system performance and hosting capacity.  
+Therefore, this research aims to address these gaps by developing an optimized and coordinated smart 
+inverter control framework. The study will focus on evaluating system performance under varying 
+conditions, optimizing control parameters, and comparing di fferent strategies to improve voltage 
+regulation and enhance hosting capacity in modern distribution networks.  
+Word count: 1471  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 11 ---
+10 
+ 5. Methodology  
+This research adopts a comprehensive simulation -based analytical methodology to investigate and 
+optimize smart inverter control strategies for voltage regulation in distribution networks with high 
+solar photovoltaic (PV) penetration. The increasing integra tion of distributed solar energy introduces 
+significant voltage fluctuations due to the intermittent nature of solar generation, which challenges 
+the stability and reliability of modern power systems. Therefore, this study focuses on modelling, 
+simulation,  control implementation, and optimization of smart inverter strategies under varying 
+operating conditions.  
+The methodology is structured into several interconnected stages, including system modelling, 
+mathematical formulation, control strategy implementation, simulation scenario development, 
+performance evaluation, and optimization. This structured approach ens ures a systematic evaluation 
+of smart inverter performance and enables a detailed comparison between different control 
+techniques under realistic grid conditions.  
+5.1 System Modelling  
+A realistic distribution network model will be developed using MATLAB/Simulink to simulate the 
+behavior  of a power system with high solar PV penetration. MATLAB/Simulink is widely used for 
+modelling electrical systems and control strategies due to its flexibility and accuracy in representing 
+dynamic system behavior  [23]. 
+The study will utilize the IEEE 33 -bus radial distribution system, which is commonly adopted in power 
+system research for analyzing  voltage stability and the integration of distributed energy resources [23]. 
+This system provides a suitable benchmark for evaluating the impact of high PV penetration and sm art 
+inverter control strategies.  The network will be modified to include distributed solar PV units 
+connected at multiple buses. These PV units will represent decentralized generation and will be 
+integrated with smart inverters capable of controlling both active and reactive power output.  
+The system model will include the following components:  
+• Distributed PV Generation Units:  Solar PV systems will be installed at selected buses, with 
+penetration levels varying from low (20%) to high (80%) to simulate different grid scenarios.  
+• Smart Inverters:  Each PV system will be connected to a smart inverter equipped with advanced 
+control capabilities such as Volt -VAR and Volt -Watt control.  
+• Load Modelling:  Time -varying load profiles will be incorporated to reflect realistic electricity 
+demand patterns, including peak and off -peak conditions.  
+• Network Parameters:  Line impedances, bus voltages, and transformer characteristics will be 
+defined based on standard IEEE test system data.  
+To simulate realistic operating conditions, solar irradiance will be varied to represent different weather 
+scenarios such as clear sky, partial cloud cover, and low irradiance. This variability is essential for 
+evaluating inverter performance under dynamic  conditions [24]. 
+The modelling of PV systems and inverter integration will follow established simulation approaches 
+reported in recent studies [23] [24]. 
+
+--- PAGE 12 ---
+11 
+ 5.2 Mathematical Formulation  
+The performance of smart inverter control strategies will be analyzed  using fundamental power system 
+equations.  
+The voltage deviation at each bus is defined as:  
+Δ𝑉𝑖=𝑉𝑖−𝑉𝑛𝑜𝑚𝑖𝑛𝑎𝑙  
+ 
+where 𝑉𝑖represents the voltage at bus 𝑖, and 𝑉𝑛𝑜𝑚𝑖𝑛𝑎𝑙 is the nominal voltage (typically 1.0 per unit).  
+The active and reactive power  relationships are expressed as:  
+𝑃=𝑉𝐼cos⁡𝜃 
+𝑄=𝑉𝐼sin⁡𝜃 
+ 
+where 𝑃is the active power, 𝑄is the reactive power, 𝑉is voltage magnitude, 𝐼is current, and 𝜃is the 
+phase angle.  
+The Volt -VAR control strategy regulates reactive power output as a function of voltage:  
+𝑄=𝑓(𝑉) 
+ 
+In this approach, the inverter injects reactive power during undervoltage conditions and absorbs 
+reactive power during overvoltage conditions. The implementation of Volt -VAR control curves is based 
+on standard inverter control practices widely discussed in  literature [12]. 
+Similarly, the Volt -Watt control strategy regulates active power output:  
+𝑃=𝑓(𝑉) 
+ 
+When the voltage exceeds a predefined threshold, the inverter reduces active power output to 
+mitigate overvoltage conditions. Volt -Watt control has been widely applied for managing voltage rise 
+in distribution networks with high PV penetration [24]. 
+These mathematical formulations provide the basis for evaluating inverter performance and enable 
+quantitative comparison between different control strategies.  
+5.3 Control Strategy Implementation  
+Three control strategies will be implemented and analyzed  within the simulation environment.  
+1. Volt -VAR Control  
+In this strategy, the smart inverter dynamically adjusts reactive power output based on local voltage 
+measurements. When the voltage drops below acceptable limits, the inverter injects reactive power 
+to increase voltage levels. Conversely, when the voltage  exceeds acceptable limits, the inverter absorbs 
+reactive power to reduce voltage rise. This method is effective for maintaining voltage within 
+permissible limits.  
+
+--- PAGE 13 ---
+12 
+ 2. Volt -Watt Control  
+Volt-Watt control regulates the active power output of the inverter. During high PV generation 
+conditions, excessive power injections  can lead to overvoltage. In this case, the inverter reduces its 
+active power output to maintain system stability. This method is particularly useful in networks with 
+high PV penetration.  
+3. Hybrid (Coordinated) Control  
+A coordinated control strategy combining Volt -VAR and Volt -Watt functions will be implemented. This 
+hybrid approach allows simultaneous control of both active and reactive power, providing improved 
+flexibility and enhanced voltage regulation performance. P revious studies have shown that 
+coordinated control strategies can significantly outperform individual methods in maintaining voltage 
+stability [10]. 
+Control parameters such as voltage thresholds, dead bands, and power limits will be adjusted to 
+evaluate system performance under different operating conditions.  
+5.4 Simulation Scenarios  
+To comprehensively evaluate system performance, multiple simulation scenarios will be designed.  
+Base Case:  
+• No smart inverter control  
+• Used as a benchmark for comparison  
+Case 1:  
+• Volt-VAR control only  
+Case 2:  
+• Volt-Watt control only  
+Case 3:  
+• Hybrid coordinated control  
+Each case will be analyzed  under different solar PV penetration levels:  
+• Low penetration (20%)  
+• Medium penetration (50%)  
+• High penetration (80%)  
+In addition, dynamic operating conditions will be simulated by varying solar irradiance and load 
+demand. These variations are essential for evaluating the performance of smart inverters under 
+realistic grid conditions [24]. 
+5.5 Performance Metrics  
+The effectiveness of each control strategy will be evaluated using the following performance indicators:  
+
+--- PAGE 14 ---
+13 
+ • Voltage Deviation (%):  Measures the deviation of bus voltage from nominal values  
+• Voltage Violations:  Number of buses exceeding acceptable voltage limits  
+• Power Losses:  Total losses in the distribution network  
+• Hosting Capacity:  Maximum level of PV penetration without violating voltage constraints  
+• Voltage Stability Response Time:  Time required for the system to return to stable voltage 
+conditions  
+These metrics provide a comprehensive framework for assessing system performance and enable 
+detailed comparison between different control strategies.  
+5.6 Optimization Approach  
+To further enhance system performance, optimization techniques will be applied to determine optimal 
+control parameters for smart inverters.  
+Particle Swarm Optimization (PSO) will be employed due to its effectiveness in solving nonlinear 
+optimization problems and its successful application in power system optimization studies [25]. 
+The optimization process will aim to:  
+• Minimize voltage deviation  
+• Reduce total system losses  
+• Maximize hosting capacity  
+The algorithm will iteratively adjust control parameters such as voltage thresholds, reactive power 
+limits, and control curve slopes to achieve optimal performance.  
+5.7 Validation and Benchmarking  
+The simulation results will be validated by comparing system performance against established 
+standards such as the IEEE 1547 standard, which defines acceptable voltage limits and inverter 
+performance requirements [22]. 
+Additionally, the results will be compared with findings from existing literature to ensure the accuracy 
+and reliability of the simulation model.  
+5.8 Methodological Workflow  
+The overall research process follows a structured workflow:  
+1. Develop IEEE 33 -bus distribution network model  
+2. Integrate solar PV systems and smart inverter models  
+3. Implement control strategies (Volt -VAR, Volt -Watt, Hybrid)  
+4. Perform simulations under varying operating conditions  
+5. Evaluate system performance using defined metrics  
+
+--- PAGE 15 ---
+14 
+ 6. Apply optimization techniques  
+7. Compare and validate results  
+5.9 Assumptions and Limitations  
+The study is based on several assumptions:  
+• Solar generation profiles follow typical irradiance patterns  
+• Grid parameters remain constant during simulation  
+• Communication delays between devices are not considered  
+Limitations of the study include:  
+• Extreme weather conditions are not modelled  
+• Real -time hardware implementation is beyond the scope  
+• Cybersecurity aspects of smart grid systems are not considered  
+Word count: 1 247 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 16 ---
+15 
+ 6. Resources  
+The project will also consume several resources such as software, data, and access to 
+hardware to simulate, and much time will be allocated. The cost, availability of samples, data 
+and software requirements are detailed in a table below:  
+Resource  Details  
+Software  MATLAB/ Simulink modeling and simulation. There are the 
+licensing fees that are expected.  
+Samples/Data  There will be simulated solar grid data and data which varies with 
+solar conditions. Relevant utility companies or public databases 
+will be required to provide access to grid data.  
+Specialist Software  MATLAB/Simulink (licensed software), control strategy evaluation 
+tools based on optimization and statistical analysis tools.  
+Table 6.1: Resources  
+Simulation of the models of grids, testing of the control strategies, and optimization of the placement 
+of the inverters will be the main activities that will guarantee the quality of simulations and data 
+gathering. The time per work package is as shown in  the table above with an estimated time of the 
+whole research process being 5 months.  
+6.1 Estimated Timeline  
+Work Package  Estimated Time (Months)  
+Voltage Regulation Analysis  2 months  
+Control Strategy Evaluation  2 months  
+Recommendations for Optimization  1 month  
+Total Duration  5 months  
+Table 2: Estimated Timeline  
+Word count: 1 90 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 17 ---
+16 
+ 7. Ethical and Safety Implications and Open Access Considerations  
+No health or safety concerns will be direct because there are no human participants or health -related 
+information involved in this research. Nevertheless, privacy, and security of the data will be upheld, in 
+case real -world grid data are employed, where an onymization should be performed. The issues of 
+gender and diversity are not the direct concerns related to the technical side of the given study. The 
+results will be distributed freely and openly in an open -access repository that will also be used by the 
+wider scientific community and will help other researchers of the future to understand current trends 
+in smart grid technologies and integration of renewable energy sources into the grid.  
+Word count: 1 10 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 18 ---
+17 
+ References  
+ 
+[1]  E. P . R. I. (EPRI), "Voltage Regulation Support from Smart Inverters". gridlab.org  
+[2]  R. S. P . S. C. A. M. Wagle, "Optimal power flow based coordinated reactive and active 
+power control to mitigate voltage violations in smart inverter enriched distribution 
+network," International Journal of Green Energy, 2024. tandfonline.com  
+[3]  A. H. S. P . H. Javed, "Using Smart PV Inverters for Reactive Power Management in 
+Distribution Grids". research.tue.nl  
+[4]  V. G. N. D. D. Kekatos, "Designing Reactive Power Control Rules for Smart Inverters 
+using Support Vector Machines," IEEE Transactions on Smart Grid, vol. 10, no. 3, p. 
+4072 –4081, 2019. engineering.purdue.edu  
+[5]  C. D. V. H. H. V. K. J. Li, "Optimal Voltage Regulation of Unbalanced Distribution 
+Networks with Coordination of OLTC and PV Generation," arXiv preprint, 2019. 
+arxiv.org  
+[6]  R. R. D. A. Jha, "Local Smart Inverter Control to Mitigate the Effects of Photovoltaic (PV) 
+Generation Variability," arXiv preprint, 2019. arxiv.org  
+[7]  "Design and field implementation of smart grid integrated control of PV inverters for 
+active voltage regulation and reactive power dispatch," Renewable Energy / Energy 
+Systems Journal, 2022. sciencedirect.com  
+[8]  "Active power control to mitigate voltage and frequency deviations for inverter -based 
+resources under high PV penetration," Energy Conversion and Management, 2019. 
+sciencedirect.com  
+[9]  "Adaptive reactive power control for voltage rise mitigation on distribution feeders 
+with high PV penetration," Solar Energy, 2024. sciencedirect.com  
+[10]  "Coordination of smart inverter -enabled distributed energy resources for enhanced 
+grid stability and voltage regulation," Journal of Renewable & Solar Energy Research, 
+2024. mdpi.com  
+[11]  V. G. N. D. D. Kekatos, "Designing Reactive Power Control Rules for Smart Inverters 
+using Support Vector Machines," IEEE Transactions on Smart Grid, vol. 10, no. 3, p. 
+4072 –4081, 2019. engineering.purdue.edu  
+
+--- PAGE 19 ---
+18 
+ [12]  "Combining Volt VAr and Watt VAr Control in Smart Inverters to Mitigate Voltage Rise 
+under High PV Penetration," International Journal of Renewable Energy Research.  
+ijrer.ijrer.org  
+[13]  "Voltage Control Using Inverter Reactive Power Control," HeatSpring / Electric 
+Distribution Academy blog.  heatspring.com  
+[14]  "Challenges and opportunities for voltage regulation in distribution grids with high 
+penetration of inverter -based generation".  
+[15]  "Analysis of distribution grid voltage stability under high solar PV penetration: role of 
+smart inverters and grid reinforcement strategies," Energy Systems, 2023.  
+[16]  GridLab, "Smart Inverter Voltage Regulation Applications," IEEE, 2019. ieee.org  
+[17]  L. T. a. L. M. O. Dzobo, "A review of smart inverter capabilities for managing high levels 
+of distributed energy resource integration in South Africa’s power grid," Journal of 
+Energy in Southern Africa, vol. 34, pp. 1 -20, 2023. 
+https://energyjournal.africa/article/view/18055  
+[18]  M. H. H. S. M. A. a. T. K. V. Sharma, "Smart inverter and battery storage controls to 
+reduce financial loss due to overvoltage -induced PV curtailment in distribution 
+feeders," Sustainable Energy, Grids and Networks, vol. 34, p. 101030, 2023. 
+https://www.sciencedirect.com/science/article/abs/pii/S2352467723000383  
+[19]  M. J. A. a. F. S. Al -Ismail, "Voltage Optimization in Active Distribution Networks —
+Utilizing Analytical and Computational Approaches in High Renewable Energy 
+Penetration Environments," Energies, Vols. vol. 17, no. 5, p. 1216, 2024. 
+https://www.mdpi.com/1996 -1073/17/5/1216  
+[20]  M. A. T. B. a. D. A. M. Schwenzer, "Review on model predictive control: an engineering 
+perspective," The International Journal of Advanced Manufacturing Technology, vol. 
+117, pp. 1327 -1349, 2021. https://www.mdpi.com/1996 -1073/17/5/1216  
+[21]  K. F. Z. B. a. M. M. J. Francisti, "Predictive modeling and anomaly detection in solar PV 
+inverters using machine learning," Results in Engineering, vol. 28, p. 108348, 2025. 
+https://link.springer.com/article/10.1007/s00170 -021-07682 -3 
+[22]  I. P . &. E. Society, "Impact of IEEE 1547 Standard on Smart Inverters and the 
+Applications in Power Systems," IEEE Power & Energy Society Technical Report, 2020. 
+https://www.sciencedirect.com/science/article/pii/S2590123025043920  
+[23]  C. C. Marouchos, "Modeling a residential grid -connected PV system with battery –
+supercapacitor storage: Control design and stability analysis," Energy Reports, vol. 7, 
+
+--- PAGE 20 ---
+19 
+ pp. 4988 -5002, 2021. 
+https://www.sciencedirect.com/science/article/pii/S235248472100603X  
+[24]  J. P . S. K. R. a. M. R. B. K. D. Almeida, "Performance Evaluation of Solar PV Inverter 
+Controls for Overvoltage Mitigation in MV Distribution Networks," Electronics, Vols. 
+vol. 10, no. 12, p. 1456, 2021. https://www.mdpi.com/2079 -9292/10/12/1456  
+[25]  K.-H. Y . J. -W. S. J. -C. K. a. S. -M. C. H. -J. Lee, "Optimal Parameters of Volt –Var Function in 
+Smart Inverters for Improving System Performance," Energies, Vols. vol. 13, no. 9, p. 
+2294, 2020. https://www.mdpi.com/1996 -1073/13/9/2294  
+[26]  A. R. B. A. R. M. F. a. E. E. M. A. Arain, "Optimal Location and Sizing of Photovoltaic -
+Based Distributed Generations to Improve the Efficiency and Symmetry of a 
+Distribution Network by Handling Random Constraints of Particle Swarm Optimization 
+Algorithm,"  Symmetry, Vols. vol. 15, no. 9, p. 1752, 2023. 
+https://www.mdpi.com/2073 -8994/15/9/1752  
+[27]  P . M. B. E. P . P . Rajakumar, "Optimized placement and sizing of solar photovoltaic 
+distributed generation using jellyfish search algorithm for enhanced power system 
+performance," Scientific Reports, vol. 15, p. 20755, 2025. 
+https://www.nature.com/articles/s41598 -025-08227 -4 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 

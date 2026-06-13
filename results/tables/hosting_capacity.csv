@@ -1,0 +1,6 @@
+ControlStrategy,HostingCapacityPercent
+none,80
+voltvar,100
+voltwatt,120
+hybrid,250
+hybrid_pso,250

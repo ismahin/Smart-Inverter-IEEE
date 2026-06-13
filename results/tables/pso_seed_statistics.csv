@@ -1,0 +1,2 @@
+MeanObjective,StdObjective,BestObjective,BestSeed,DefaultHybridObjective,OptimizedHybridObjective,RequestedSwarmSize,RequestedMaxIterations,ActualSwarmSize,ActualMaxIterations
+9.86755242178317,1.82966072236443,7.7889541086249,5,16.8723776994277,7.7889541086249,40,80,8,8
